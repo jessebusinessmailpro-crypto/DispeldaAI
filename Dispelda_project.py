@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
-from sklearn.ensemble import RandomForestRegressor
+from scikit-learn import RandomForestRegressor
 from datetime import datetime, timedelta
 
 # --- 1. CONFIGURATION DU DASHBOARD (BRANDING DISPELDA) ---
@@ -184,4 +184,5 @@ with tab2:
         
     with chart_col2:
         st.caption("Taux d'Humidité (Facteur critique d'évaporation)")
+
         st.area_chart(subset.set_index('Timestamp')['Humidity'], color="#84cc16")
