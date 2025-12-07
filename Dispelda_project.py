@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.graph_objects as go
+import plotly as go
 from scikit-learn import RandomForestRegressor
 from datetime import datetime, timedelta
 
@@ -186,3 +186,4 @@ with tab2:
         st.caption("Taux d'Humidité (Facteur critique d'évaporation)")
 
         st.area_chart(subset.set_index('Timestamp')['Humidity'], color="#84cc16")
+
